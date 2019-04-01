@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LFMainViewController" customModule="LFopen2Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-x1-jQi">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="VEN-yw-ysG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tap here to login!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapProximitButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGz-6r-QqA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-fh-ca5">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="73" id="A9G-V6-RIS"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="FKQ-Dx-aYx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="dfc-fw-U6d"/>
+                                    <constraint firstAttribute="height" constant="50" id="sXV-74-qMl"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Scan"/>
+                                <connections>
+                                    <action selector="onTapScanButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQZ-Pd-vdm"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="54" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-og-UpB">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell-identifire" textLabel="ZuA-xd-sVw" detailTextLabel="HES-6c-8Ac" style="IBUITableViewCellStyleValue1" id="BO3-ce-5ss">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BO3-ce-5ss" id="fwX-k0-X1p">
+                                            <frame key="frameInset" width="414" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZuA-xd-sVw">
+                                                    <frame key="frameInset" minX="15" minY="16" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HES-6c-8Ac">
+                                                    <frame key="frameInset" minX="355" minY="16" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S7I-ON-bgm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z4a-Qc-pvg"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-jl-A9R">
+                                <frame key="frameInset" minX="8" minY="28" width="46" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="S89-zz-1Ef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1N2-x1-jQi" secondAttribute="trailing" id="76m-Rg-Ryc"/>
+                            <constraint firstItem="eeH-og-UpB" firstAttribute="top" secondItem="8ZF-fh-ca5" secondAttribute="bottom" constant="4" id="9h9-6r-l0f"/>
+                            <constraint firstItem="eeH-og-UpB" firstAttribute="trailing" secondItem="1N2-x1-jQi" secondAttribute="trailing" id="BQB-sb-AsX"/>
+                            <constraint firstItem="1N2-x1-jQi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Sxf-20-dEK"/>
+                            <constraint firstItem="1N2-x1-jQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aBC-yR-dn7"/>
+                            <constraint firstItem="eeH-og-UpB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="btf-rG-HiT"/>
+                            <constraint firstItem="eeH-og-UpB" firstAttribute="leading" secondItem="1N2-x1-jQi" secondAttribute="leading" id="dBK-OX-64Y"/>
+                            <constraint firstItem="8ZF-fh-ca5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="v1f-a0-0iT"/>
+                            <constraint firstItem="8ZF-fh-ca5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="24" id="yzL-mG-dz7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="proximityButton" destination="1N2-x1-jQi" id="Df2-0U-irF"/>
+                        <outlet property="resetButton" destination="dSG-jl-A9R" id="voN-uS-yaj"/>
+                        <outlet property="scanButton" destination="8ZF-fh-ca5" id="tBy-En-EBx"/>
+                        <outlet property="workoutTable" destination="eeH-og-UpB" id="GVA-aw-ybt"/>
+                        <segue destination="jMD-Vo-JmT" kind="presentation" identifier="show_scan_view" id="e5z-FI-9V2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="88.858695652173921"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="oSC-go-cQg">
+            <objects>
+                <viewController id="jMD-Vo-JmT" customClass="ScanViewController" customModule="LFopen2Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gzf-mL-U1N"/>
+                        <viewControllerLayoutGuide type="bottom" id="6wq-lW-mbN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rcV-ih-XZo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-Cg-qBn">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="5iB-Mr-azG"/>
+                                    <constraint firstAttribute="width" constant="414" id="Q7Z-15-C8v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapCancelButton" destination="jMD-Vo-JmT" eventType="touchUpInside" id="lB6-Op-ffi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1iA-Cg-qBn" firstAttribute="bottom" secondItem="6wq-lW-mbN" secondAttribute="top" id="j0v-VC-rXM"/>
+                            <constraint firstItem="1iA-Cg-qBn" firstAttribute="centerX" secondItem="rcV-ih-XZo" secondAttribute="centerX" id="lSK-rv-QwO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="1iA-Cg-qBn" id="ue3-dq-FQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emc-Ne-bHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608.69565217391312" y="85.59782608695653"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Scan" width="46" height="46"/>
+    </resources>
+</document>
